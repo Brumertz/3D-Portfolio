@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../styles.css";
-
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
@@ -30,19 +29,19 @@ const Navbar = () => {
     
     <nav
     className={`w-full items-center fixed top-0 z-20 padding-x py-5 
-      ${scrolled ? "bg-[#aaa6c3]" : "bg-transparent"}
+      ${scrolled ? "bg-transparent" : "bg-[#050816]"}
     `}
   >
       <div className='w-full flex justify-between items-center  max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center  '
+          className='flex items-center padding-x gap-3'
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >    
-          <img src={logo} alt='logo' className="w-9 h-9 object-contain.. " />
+          <img src={logo} alt='logo' className="w-9 h-9 object-contain " />
           <p className="text-white text-[18px] font-bold cursor-pointer flex "> 
             Brandon &nbsp; 
             <span className="sm:block hidden"> | Programming Dev</span>
