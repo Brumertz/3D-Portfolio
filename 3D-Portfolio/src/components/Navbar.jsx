@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { styles } from "../styles";
+import "../styles.css";
+
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
@@ -26,29 +27,28 @@ const Navbar = () => {
       }, []);
   
   return (
+    
     <nav
-    className={`${
-      styles.paddingX
-    } w-full flex items-center py-5 fixed top-0 z-20  ${
-      scrolled ? "bg-[#050816]" : "bg-transparent"
-    }`}
+    className={`w-full items-center fixed top-0 z-20 padding-x py-5 
+      ${scrolled ? "bg-[#aaa6c3]" : "bg-transparent"}
+    `}
   >
-      
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+      <div className='w-full flex justify-between items-center  max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center gap-2'
+          className='flex items-center  '
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >    
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-               Brandon &nbsp; 
-               <span className='sm:block hidden'> | Programming Developer</span>
+          <img src={logo} alt='logo' className="w-9 h-9 object-contain.. " />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex "> 
+            Brandon &nbsp; 
+            <span className="sm:block hidden"> | Programming Dev</span>
           </p>
         </Link>
+        
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li

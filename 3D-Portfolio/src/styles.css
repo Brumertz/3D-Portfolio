@@ -1,0 +1,50 @@
+/* styles.css */
+
+:root {
+    --padding-x-small: 6px;
+    --padding-x-large: 16px;
+    --padding-y-small: 10px;
+    --padding-y-large: 16px;
+  }
+  
+  /* Clases reutilizables para padding */
+  .padding-x {
+    padding-left: var(--padding-x-small);
+    padding-right: var(--padding-x-small);
+  }
+  
+  @media (min-width: 640px) { /* sm: */
+    .padding-x {
+      padding-left: var(--padding-x-large);
+      padding-right: var(--padding-x-large);
+    }
+  }
+  
+  .padding-y {
+    padding-top: var(--padding-y-small);
+    padding-bottom: var(--padding-y-small);
+  }
+  
+  @media (min-width: 640px) { /* sm: */
+    .padding-y {
+      padding-top: var(--padding-y-large);
+      padding-bottom: var(--padding-y-large);
+    }
+  }
+  
+  .padding {
+    padding-left: var(--padding-x-small);
+    padding-right: var(--padding-x-small);
+    padding-top: var(--padding-y-small);
+    padding-bottom: var(--padding-y-small);
+  }
+  
+  @media (min-width: 640px) { /* sm: */
+    .padding {
+      padding-left: var(--padding-x-large);
+      padding-right: var(--padding-x-large);
+      padding-top: var(--padding-y-large);
+      padding-bottom: var(--padding-y-large);
+    }
+  }
+  
