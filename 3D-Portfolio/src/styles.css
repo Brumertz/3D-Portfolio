@@ -71,11 +71,11 @@
 
   /* Hero Text */
 .hero-head {
-  font-weight: 900;
+  font-weight: 800;
   color: white;
   font-size: 40px;
   line-height: normal;
-  margin-top: 2px;
+  
 }
 
 @media (min-width: 480px) {
@@ -161,3 +161,4 @@
     font-size: 18px;
   }
 }
+
