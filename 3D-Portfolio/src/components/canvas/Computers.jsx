@@ -18,20 +18,19 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh receiveShadow castShadow>   
-      <hemisphereLight intensity={1.5} groundColor={new THREE.Color("black")} />
+      <hemisphereLight intensity={3.5} groundColor={new THREE.Color("black")} />
       <spotLight
         ref={spotLightRef}
-        angle={0.3}
-        penumbra={1}
-        intensity={5}
+        intensity={7}
+        angle={3}
         castShadow
       />
-      <pointLight intensity={2} />
+      <pointLight intensity={3} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.5 : 0.75}
-        position={isMobile ? [0, -2, -1.6] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 0.45 : 0.75}
+        position={isMobile ? [0, -1.9, -1.3] : [0, -3.25, -1.5]}
+        rotation={[-0.001, -0.2, -0.1]}
         castShadow
       />
     </mesh>
@@ -42,9 +41,24 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 500);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
   }, []);
 
   return (
