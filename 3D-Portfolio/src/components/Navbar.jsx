@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     
     <nav
-    className={`w-full items-center fixed top-0 z-20 padding-x py-5 
+    className={`w-full items-center fixed top-0 z-20 padding py-5 
       ${scrolled ? "bg-transparent" : "bg-[#050816]"}
     `}
   >
