@@ -8,10 +8,10 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='w-[250px] padding padding-y'>
+  <Tilt className='w-[250px] padding '>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className=' w-full  green-pink-gradient p-[1px] rounded-[20px]'
+      className=' w-full  green-pink-gradient  rounded-[19px]'
       style={{ boxShadow: "var(--shadow-card)" }}
     >
       <div
@@ -20,13 +20,13 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className=' padding w-full rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className=' padding  rounded-[21px] py-4 px-12 min-h-[260px] flex justify-evenly items-center flex-col'
         style={{ backgroundColor: "var(--color-tertiary)" }}
         >
         <img
           src={icon}
           alt='web-development'
-          className='w-16 h-16 object-contain'
+          className='w-16 h-16 object-contain padding'
         />
 
         <h3 className='text-white text-[20px] font-bold text-center'>
