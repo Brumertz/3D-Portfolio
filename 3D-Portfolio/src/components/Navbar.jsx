@@ -29,7 +29,7 @@ const Navbar = () => {
     
     <nav
     className={`w-full items-center fixed top-0 z-20 padding py-5 
-      ${scrolled ? "bg-transparent" : "bg-[#050816]"}
+      ${scrolled ? "bg-[#050816]" : "bg-[#050816]"}
     `}
   >
       <div className='w-full flex justify-between items-center  max-w-7xl mx-auto'>
@@ -41,7 +41,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >    
-          <img src={logo} alt='logo' className="w-9 h-9 object-contain " />
+          <img src={logo} alt='logo' className="w-10 h-10 object-contain " />
           <p className="text-white text-[18px] font-bold cursor-pointer flex "> 
             Brumertz &nbsp; 
             <span className="sm:block hidden"> | Programming Dev</span>

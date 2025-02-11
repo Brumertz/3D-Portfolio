@@ -8,7 +8,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='w-[250px] padding '>
+  <Tilt className='w-[250px] xs:w-full padding '>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className=' w-full  green-pink-gradient  rounded-[19px]'
