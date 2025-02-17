@@ -8,11 +8,12 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='w-[250px] xs:w-full padding '>
+  <Tilt className='w-[250px] xs:w-full padding '
+  style={{marginLeft: "25px"}}>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className=' w-full  green-pink-gradient  rounded-[19px]'
-      style={{ boxShadow: "var(--shadow-card)" }}
+      style={{ boxShadow: "var(--shadow-card)", marginLeft: "25px" }}
     >
       <div
         options={{

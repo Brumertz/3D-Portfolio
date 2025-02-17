@@ -20,11 +20,11 @@ const FeedbackCard = ({
   >
     <p className='  text-white font-black text-[48px]'>"</p>
 
-    <div className='mt-1 '>
+    <div className='mt-1  '>
       <p className='text-white tracking-wider text-[16px]'>{testimonial}</p>
 
       <div className='mt-7   flex justify-between items-center gap-1'>
-        <div className='padding flex-1 flex flex-col'>
+        <div className=' flex-1 flex flex-col'>
           <p className='text-white  font-medium text-[16px]'>
             <span className='blue-text-gradient'>@</span> {name}
           </p>
@@ -37,7 +37,7 @@ const FeedbackCard = ({
         <img
           src={image}
           alt={`feedback_by-${name}`}
-          className=' w-12 h-12 rounded-full object-cover'
+          className='w-12 h-12 rounded-full object-cover'
         />
       </div>
     </div>
@@ -46,19 +46,19 @@ const FeedbackCard = ({
 
 const Feedbacks = () => {
   return (
-    <div className={`mt-12  padding rounded-[20px]`}
-    style={{ backgroundColor: "var(--color-tertiary)" }}
+    <div className={`xl:mt-12 padding  rounded-[20px]`}
+    style={{ backgroundColor: "var(--color-tertiary)", marginLeft: "25px" }}
+  
  >
       <div
-        className={`  rounded-2xl  min-h-[180px]`}
-      
+        className={` padding rounded-2xl min-h-[180px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={`section-sub`}>What others say</p>
-          <h2 className={`section-head`}>Testimonials.</h2>
+          <p className='section-sub'>What others say</p>
+          <h2 className='section-head'>Testimonials.</h2>
         </motion.div>
       </div>
-      <div className={`padding mt-7 pb-14  flex flex-wrap gap-7`}>
+      <div className='padding m-24   flex flex-wrap gap-7'>
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
